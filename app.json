@@ -1,0 +1,25 @@
+{
+    "name": "TorToolkit-Telegram",
+    "description": "Most versatile Telegram torrent, direct-link, mega, and youtube-dl bot. Uploads to various cloud storage like Gdrive, Mega, Telegram, etc.",
+    "repository": "https://github.com/BAGBOY555/TorToolkit-Telegram",
+    "env": {
+        "API_HASH ": {
+            "description": "Get this value from https",
+            "required": "True",
+            "value": "//my.telegram.org ",
+            "generator": "secret"
+        }
+    },
+    "stack": "heroku-20",
+    "buildpacks": [
+        {
+            "url": "requirements.txt"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
